@@ -1,4 +1,4 @@
-package com.barcoding.episode3annotations.lombok;
+package com.barcoding.episode3annotations.lombok.annotations;
 
 import org.junit.jupiter.api.Test;
 
@@ -21,8 +21,17 @@ class PodcastInitialisationTest {
   }
 
   @Test
+  void podCastData_shouldImplement_EqualsAndHashCode(){
+    final PodcastData podcastData = new PodcastData(BAR_CODING, List.of(ARNOUT, PAULIEN));
+    final PodcastData podcastData2 = new PodcastData(BAR_CODING, List.of(ARNOUT, PAULIEN));
+
+    assertThat(podcastData).isEqualTo(podcastData2);
+    assertThat(podcastData.hashCode()).isEqualTo(podcastData2.hashCode());
+  }
+
+  @Test
   void podCastBuilder_ShouldHave_Builder() {
-    final PodcatBuilder podcastBuilder = PodcatBuilder.builder()
+    final PodcastBuilder podcastBuilder = PodcastBuilder.builder()
         .name(BAR_CODING)
         .participants(List.of(ARNOUT, PAULIEN))
         .build();
