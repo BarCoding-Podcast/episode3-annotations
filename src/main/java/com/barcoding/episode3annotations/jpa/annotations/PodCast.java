@@ -5,7 +5,7 @@ import javax.persistence.Id;
 
 @Entity
 public class PodCast {
-    @Id
-    private long id;
-    private String name;
+  @Id
+  private long id;
+  private String name;
 }

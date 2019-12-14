@@ -34,7 +34,7 @@ public class PodcastData {
     if (o == null || getClass() != o.getClass()) return false;
     PodcastData that = (PodcastData) o;
     return Objects.equals(name, that.name) &&
-               Objects.equals(participants, that.participants);
+        Objects.equals(participants, that.participants);
   }
 
   @Override

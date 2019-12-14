@@ -12,6 +12,6 @@ import java.util.List;
 @Setter
 @Value
 public class ImmutablePodcastData {
-    @NonFinal private String name;
-    private List<String> participants;
+  @NonFinal private String name;
+  private List<String> participants;
 }

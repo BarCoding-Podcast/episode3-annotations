@@ -12,5 +12,5 @@ For testing we choose to add only integration test, because most functionality i
 For the non annotation application we choosen the `SparkJava` framework, which enables us to setup an web application very fast. <br/>More information about the framework can be found at http://sparkjava.com/<br/>
 This setup can be found in the package `nonannotations`.
   
-  ### Testing
-  SparkJava doesn't use annotations, so almost the whole application can be unit tested. For testing of the correct request mapping we added an integration test.
+### Testing
+SparkJava doesn't use annotations, so almost the whole application can be unit tested. For testing of the correct request mapping we added an integration test.

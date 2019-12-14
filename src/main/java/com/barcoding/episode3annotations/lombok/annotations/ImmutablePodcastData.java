@@ -6,6 +6,6 @@ import java.util.List;
 
 @Value
 public class ImmutablePodcastData {
-    private String name;
-    private List<String> participants;
+  private String name;
+  private List<String> participants;
 }

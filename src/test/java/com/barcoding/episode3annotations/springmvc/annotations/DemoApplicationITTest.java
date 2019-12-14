@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class DemoApplicationITTest {
+class DemoApplicationITTest {
 
     // bind the above RANDOM_PORT
     @LocalServerPort
@@ -23,7 +23,7 @@ public class DemoApplicationITTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void getHello() throws Exception {
+    void getHello() throws Exception {
 
         ResponseEntity<String> response = restTemplate.getForEntity(
             new URL("http://localhost:" + port + "/hello").toString(), String.class);
@@ -32,7 +32,7 @@ public class DemoApplicationITTest {
     }
 
     @Test
-    public void getHelloBarCoding() throws Exception {
+    void getHelloBarCoding() throws Exception {
 
         ResponseEntity<String> response = restTemplate.getForEntity(
             new URL("http://localhost:" + port + "/helloBarCoding").toString(), String.class);

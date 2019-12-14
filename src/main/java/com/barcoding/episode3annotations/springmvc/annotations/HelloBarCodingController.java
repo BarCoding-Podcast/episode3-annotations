@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloBarCodingController {
 
-    @RequestMapping("/helloBarCoding")
-    private String helloWorld(){
-        return "Hello BarCoding!";
-    }
+  @RequestMapping("/helloBarCoding")
+  private String helloWorld() {
+    return "Hello BarCoding!";
+  }
 }
