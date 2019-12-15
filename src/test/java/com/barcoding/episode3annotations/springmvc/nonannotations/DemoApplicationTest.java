@@ -10,6 +10,5 @@ class DemoApplicationTest {
     @Test
     void main() {
         DemoApplication.main(null);
-
     }
 }

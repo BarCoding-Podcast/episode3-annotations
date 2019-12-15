@@ -41,6 +41,7 @@ public class DemoApplicationITTest {
     @AfterAll
     static void shutDown(){
         Spark.stop();
+        Spark.awaitStop();
     }
 
 }
