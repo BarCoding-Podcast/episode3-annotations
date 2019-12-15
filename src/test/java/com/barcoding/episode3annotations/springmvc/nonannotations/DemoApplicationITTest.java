@@ -1,9 +1,9 @@
 package com.barcoding.episode3annotations.springmvc.nonannotations;
 
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 import spark.Spark;
@@ -18,8 +18,8 @@ public class DemoApplicationITTest {
     private final RestTemplate restTemplate = new RestTemplate();
     private static final int PORT = 8888;
 
-    @BeforeAll
-    static void init(){
+    @BeforeEach
+    void init(){
         DemoApplication.main(null);
     }
 
@@ -38,8 +38,8 @@ public class DemoApplicationITTest {
 
     }
 
-    @AfterAll
-    static void shutDown(){
+    @AfterEach
+    void shutDown(){
         Spark.stop();
         Spark.awaitStop();
     }
