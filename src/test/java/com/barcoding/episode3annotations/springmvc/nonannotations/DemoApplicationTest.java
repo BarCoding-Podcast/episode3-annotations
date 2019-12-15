@@ -10,5 +10,7 @@ class DemoApplicationTest {
     @Test
     void main() {
         DemoApplication.main(null);
+        Spark.stop();
+        Spark.awaitStop();
     }
 }
